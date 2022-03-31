@@ -29,15 +29,6 @@ example)
 }
 ```
 
-## Hierarchy
-
-- `BaseMessage`
-
-  ↳ **`TuyaBaseMessage`**
-
-  ↳↳ [`TuyaBizBaseMessage`](TuyaDeviceProtocol.TuyaBizBaseMessage.md)
-
-  ↳↳ [`TuyaStatusBaseMessage`](TuyaDeviceProtocol.TuyaStatusBaseMessage.md)
 
 ## Properties
 

@@ -1,0 +1,62 @@
+[디바이스 프로토콜 정의 - v220110](../README.md) / [Modules](../modules.md) / [ZigbangDeviceShadow](../modules/ZigbangDeviceShadow.md) / ZThingShadowStatusTempHumid
+
+# Class: ZThingShadowStatusTempHumid
+
+[ZigbangDeviceShadow](../modules/ZigbangDeviceShadow.md).ZThingShadowStatusTempHumid
+
+ZThingShadow 포멧중 온습도 센서 포멧입니다.
+
+ZThingShadow의 온습도 센서는 아래 properties값을 가질 수 있습니다.  자세한 내용은 Properties 항목을 참조하세요.
+
+* va_humidity : 현재 습도 상태를 나타냅니다.
+* va_temperature : 현재 온도 상태를 나타냅니다.
+
+example)
+ ```typescript
+{
+  "state": {
+    "reported": {
+      "v220110": {
+        "tuya": {
+          "is_connected": true,
+          "battery_percentage": 100,
+          "va_humidity": 6150,
+          "va_temperature": 2200
+        },
+        "tuyaStatusesLast": [
+          {
+            "code": "va_humidity",
+            "value": 6150,
+            "createdAt": 1648648163563,
+            "bridgedAt": 1648648164109
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+## Hierarchy
+
+- [`ZThingBaseShadow`](ZigbangDeviceShadow.ZThingBaseShadow.md)
+
+  ↳ **`ZThingShadowStatusTempHumid`**
+
+## Properties
+
+### va\_temperature
+
+• `Private` **va\_temperature**: `undefined` \| { `value`: `any` ; `t`: `number`  } = `undefined`
+
+현재 온도 상태를 나타냅니다. 아래의 값이 전달됩니다.
+* 현재 온도값 * 100
+
+___
+
+### va\_humidity
+
+• `Private` **va\_humidity**: `undefined` \| { `value`: `any` ; `t`: `number`  } = `undefined`
+
+현재 습도 상태를 나타냅니다. 아래의 값이 전달됩니다.
+* 현재 습도값 * 100

@@ -1,0 +1,72 @@
+[디바이스 프로토콜 정의 - v220110](../README.md) / [Modules](../modules.md) / [TuyaDeviceProtocol](../modules/TuyaDeviceProtocol.md) / TuyaStatusTempHumidMessage
+
+# Class: TuyaStatusTempHumidMessage
+
+[TuyaDeviceProtocol](../modules/TuyaDeviceProtocol.md).TuyaStatusTempHumidMessage
+
+온습도 센서입니다.
+
+투야에서 정의한 온습도 센서의 표준 code, value값을 따르는 경우 아래 프로토콜로 전달됩니다.
+
+* https://developer.tuya.com/en/docs/iot/s?id=K9gf48k1c0sgo#title-1-Status%20only%20to%20be%20reported
+
+이중 실제 사용되는 code값은 아래와 같습니다. 자세한 내용은 Properties를 참조하세요.
+
+* va_humidity : 현재 습도 상태를 나타냅니다.
+* va_temperature : 현재 온도 상태를 나타냅니다.
+* battery_percentage : 배터리 잔량을 나타냅니다.
+
+example)
+ ```typescript
+{
+		"protocol": 4,
+		"pv": "2.0",
+		"sign": "93c0dfc92445fce5ecf5f8fece99b746",
+		"t": 1647495518674,
+		"data": {
+		    "dataId": "AAXaY3Eol0VPLx3nYI8CfB",
+		    "devId": "ebd37ddc4327eb73d10pz0",
+		    "productKey": "33uazzfa",
+		    "status": [
+		        {
+		            "103": "2420",
+		            "code": "va_temperature",
+		            "t": 1647495518656,
+		            "value": 2420
+		        }
+		    ]
+		}
+}
+```
+
+## Hierarchy
+
+- [`TuyaStatusBaseMessage`](TuyaDeviceProtocol.TuyaStatusBaseMessage.md)
+
+  ↳ **`TuyaStatusTempHumidMessage`**
+
+## Properties
+
+### va\_humidity
+
+• **va\_humidity**: `undefined` \| { `value`: `any` ; `t`: `number`  } = `undefined`
+
+현재 습도 상태를 나타냅니다. 아래의 값이 전달됩니다.
+* 현재 습도값 * 100
+
+___
+
+### va\_temperature
+
+• **va\_temperature**: `undefined` \| { `value`: `any` ; `t`: `number`  } = `undefined`
+
+현재 온도 상태를 나타냅니다. 아래의 값이 전달됩니다.
+* 현재 온도값 * 100
+
+___
+
+### battery\_percentage
+
+• **battery\_percentage**: `undefined` \| { `value`: `any` ; `t`: `number`  } = `undefined`
+
+베터리 잔량을 나타냅니다.
